@@ -1,0 +1,5 @@
+# DocuMind — Work Package 02 Dependencies (PDF Ingestion & Chunking)
+# Minimal local-first dependencies: zero paid APIs, zero cloud services, zero heavy frameworks
+
+pymupdf>=2.1.0
+pytest>=8.0.0

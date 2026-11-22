@@ -1,0 +1,129 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment variables, credentials, and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+*.crt
+secrets.json
+credentials.json
+client_secret*.json
+
+# IDEs and OS files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
+
+# Linters and type checkers
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# Data directories (preserve directory structure via .gitkeep, ignore raw/processed/eval contents)
+/data/raw/*
+!/data/raw/.gitkeep
+/data/processed/*
+!/data/processed/.gitkeep
+/data/evaluation/*
+!/data/evaluation/.gitkeep
+
+# Models, weights, embeddings, and vector stores / indexes
+models/
+weights/
+*.bin
+*.pt
+*.pth
+*.onnx
+*.safetensors
+*.gguf
+*.index
+chroma/
+chroma_db/
+*.chroma
+faiss/
+faiss_index/
+qdrant_storage/
+*.sqlite
+*.sqlite3
+*.db
+
+# Caches and runtime artifacts
+.cache/
+cache/
+logs/
+*.log
+runs/
+outputs/
+temp/
+tmp/
+
+# Sensitive / Private datasets & legacy files
+/resumes/
+/*.zip
+/docs/*.pdf
+/docs/Agentic_Resume_Screening_RAG_Trial.ipynb
+
+# Relocated research reference materials and legacy archives
+/research/technical_references/Everything-to-know-about-RAG.pdf
+/research/technical_references/BASWE-15-RAG-Concepts-Guide.pdf
+/research/tutorials/RAG-Expert-Guide-BASWE.pdf
+/research/tutorials/Agentic_Resume_Screening_RAG_Trial.ipynb
+/research/legacy_references/RAG MC.pdf
+/research/legacy_references/RAG-based-Chatbot-main.zip
