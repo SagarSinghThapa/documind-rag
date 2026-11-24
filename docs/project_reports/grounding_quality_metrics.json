@@ -1,0 +1,329 @@
+{
+  "benchmark_file": "data/evaluation/retrieval_ground_truth.json",
+  "total_test_cases": 21,
+  "positive_test_cases": 13,
+  "negative_distractor_cases": 8,
+  "metrics": {
+    "hit_rate_at_k": {
+      "value": 0.7692,
+      "target": 0.85,
+      "pass": false
+    },
+    "mrr": {
+      "value": 0.6115,
+      "target": 0.7,
+      "pass": false
+    },
+    "citation_emission_rate": {
+      "value": 1.0,
+      "target": 0.95,
+      "pass": true
+    },
+    "citation_syntax_rate": {
+      "value": 1.0,
+      "target": 0.99,
+      "pass": true
+    },
+    "citation_metadata_rate": {
+      "value": 1.0,
+      "target": 0.99,
+      "pass": true
+    },
+    "evidence_support_rate": {
+      "value": 1.0,
+      "target": 0.9,
+      "pass": true
+    },
+    "negative_abstention_rate": {
+      "value": 1.0,
+      "target": 0.99,
+      "pass": true
+    },
+    "false_abstention_rate": {
+      "value": 0.0,
+      "target": 0.05,
+      "pass": true
+    },
+    "unsupported_answer_rate": {
+      "value": 0.0,
+      "target": 0.01,
+      "pass": true
+    }
+  },
+  "all_criteria_passed": false,
+  "case_results": [
+    {
+      "query_id": "CALIB-01",
+      "query": "What is chunk overlap and why is it used?",
+      "is_negative": false,
+      "expected_document": "BASWE-15-RAG-Concepts-Guide.pdf",
+      "retrieval_hit": true,
+      "retrieved_chunks": 5,
+      "is_abstained": false,
+      "abstention_type": null,
+      "grounding_status": "verified",
+      "citations_emitted": 1,
+      "answer_preview": "Chunk overlap is usually 10 to 20 percent of chunk size [S1]."
+    },
+    {
+      "query_id": "CALIB-02",
+      "query": "What is the typical recommended range for chunk overlap percentage?",
+      "is_negative": false,
+      "expected_document": "BASWE-15-RAG-Concepts-Guide.pdf",
+      "retrieval_hit": true,
+      "retrieved_chunks": 5,
+      "is_abstained": false,
+      "abstention_type": null,
+      "grounding_status": "verified",
+      "citations_emitted": 1,
+      "answer_preview": "Chunk overlap is usually 10 to 20 percent of chunk size [S1]."
+    },
+    {
+      "query_id": "CALIB-03",
+      "query": "What does an embedding model output for a chunk of text?",
+      "is_negative": false,
+      "expected_document": "BASWE-15-RAG-Concepts-Guide.pdf",
+      "retrieval_hit": true,
+      "retrieved_chunks": 5,
+      "is_abstained": false,
+      "abstention_type": null,
+      "grounding_status": "verified",
+      "citations_emitted": 1,
+      "answer_preview": "An embedding model reads a chunk and outputs an array of numbers representing meaning [S1]."
+    },
+    {
+      "query_id": "CALIB-04",
+      "query": "Why is a vector database needed instead of comparing chunks one at a time?",
+      "is_negative": false,
+      "expected_document": "BASWE-15-RAG-Concepts-Guide.pdf",
+      "retrieval_hit": true,
+      "retrieved_chunks": 5,
+      "is_abstained": false,
+      "abstention_type": null,
+      "grounding_status": "verified",
+      "citations_emitted": 1,
+      "answer_preview": "An embedding model reads a chunk and outputs an array of numbers representing meaning [S1]."
+    },
+    {
+      "query_id": "CALIB-05",
+      "query": "How does cosine similarity measure relevance between query and document vectors?",
+      "is_negative": false,
+      "expected_document": "BASWE-15-RAG-Concepts-Guide.pdf",
+      "retrieval_hit": true,
+      "retrieved_chunks": 5,
+      "is_abstained": false,
+      "abstention_type": null,
+      "grounding_status": "verified",
+      "citations_emitted": 1,
+      "answer_preview": "An embedding model reads a chunk and outputs an array of numbers representing meaning [S1]."
+    },
+    {
+      "query_id": "CALIB-06",
+      "query": "What is hybrid search and when is it helpful?",
+      "is_negative": false,
+      "expected_document": "BASWE-15-RAG-Concepts-Guide.pdf",
+      "retrieval_hit": false,
+      "retrieved_chunks": 5,
+      "is_abstained": false,
+      "abstention_type": null,
+      "grounding_status": "verified",
+      "citations_emitted": 1,
+      "answer_preview": "Hybrid search combines embeddings which are great at meaning with keyword search for exact strings [S1]."
+    },
+    {
+      "query_id": "CALIB-07-NEG",
+      "query": "What is the proper water temperature and fermentation time for sourdough bread?",
+      "is_negative": true,
+      "expected_document": null,
+      "retrieval_hit": null,
+      "retrieved_chunks": 0,
+      "is_abstained": true,
+      "abstention_type": "fast_path_empty_context",
+      "grounding_status": "abstained",
+      "citations_emitted": 0,
+      "answer_preview": "I cannot answer this question based on the provided document context."
+    },
+    {
+      "query_id": "CALIB-08-NEG",
+      "query": "How do I check the recommended tire pressure for a passenger car?",
+      "is_negative": true,
+      "expected_document": null,
+      "retrieval_hit": null,
+      "retrieved_chunks": 0,
+      "is_abstained": true,
+      "abstention_type": "fast_path_empty_context",
+      "grounding_status": "abstained",
+      "citations_emitted": 0,
+      "answer_preview": "I cannot answer this question based on the provided document context."
+    },
+    {
+      "query_id": "CALIB-09-NEG",
+      "query": "What are the depreciation schedules for corporate office equipment under GAAP?",
+      "is_negative": true,
+      "expected_document": null,
+      "retrieval_hit": null,
+      "retrieved_chunks": 0,
+      "is_abstained": true,
+      "abstention_type": "fast_path_empty_context",
+      "grounding_status": "abstained",
+      "citations_emitted": 0,
+      "answer_preview": "I cannot answer this question based on the provided document context."
+    },
+    {
+      "query_id": "CALIB-10-NEG",
+      "query": "How does quantum key distribution protect against eavesdropping in optical fiber?",
+      "is_negative": true,
+      "expected_document": null,
+      "retrieval_hit": null,
+      "retrieved_chunks": 0,
+      "is_abstained": true,
+      "abstention_type": "fast_path_empty_context",
+      "grounding_status": "abstained",
+      "citations_emitted": 0,
+      "answer_preview": "I cannot answer this question based on the provided document context."
+    },
+    {
+      "query_id": "EVAL-01",
+      "query": "How do LLMs count text and what is a token?",
+      "is_negative": false,
+      "expected_document": "Everything-to-know-about-RAG.pdf",
+      "retrieval_hit": true,
+      "retrieved_chunks": 5,
+      "is_abstained": false,
+      "abstention_type": null,
+      "grounding_status": "verified",
+      "citations_emitted": 1,
+      "answer_preview": "A token can be a short word, or part of a word; 100 tokens is about 75 English words [S1]."
+    },
+    {
+      "query_id": "EVAL-02",
+      "query": "What is the context window of an LLM?",
+      "is_negative": false,
+      "expected_document": "Everything-to-know-about-RAG.pdf",
+      "retrieval_hit": true,
+      "retrieved_chunks": 5,
+      "is_abstained": false,
+      "abstention_type": null,
+      "grounding_status": "verified",
+      "citations_emitted": 1,
+      "answer_preview": "A token can be a short word, or part of a word; 100 tokens is about 75 English words [S1]."
+    },
+    {
+      "query_id": "EVAL-03",
+      "query": "What is an LLM hallucination?",
+      "is_negative": false,
+      "expected_document": "Everything-to-know-about-RAG.pdf",
+      "retrieval_hit": true,
+      "retrieved_chunks": 3,
+      "is_abstained": false,
+      "abstention_type": null,
+      "grounding_status": "verified",
+      "citations_emitted": 1,
+      "answer_preview": "An LLM hallucination occurs when the model says something false with high confidence [S1]."
+    },
+    {
+      "query_id": "EVAL-04",
+      "query": "What are the core steps in building a search-ready store of document chunks?",
+      "is_negative": false,
+      "expected_document": "Everything-to-know-about-RAG.pdf",
+      "retrieval_hit": true,
+      "retrieved_chunks": 5,
+      "is_abstained": false,
+      "abstention_type": null,
+      "grounding_status": "verified",
+      "citations_emitted": 1,
+      "answer_preview": "Core steps are cutting documents into chunks and turning them into embedding vectors [S1]."
+    },
+    {
+      "query_id": "EVAL-05",
+      "query": "What happens when retrieved chunks are assembled into a prompt for the model?",
+      "is_negative": false,
+      "expected_document": "Everything-to-know-about-RAG.pdf",
+      "retrieval_hit": false,
+      "retrieved_chunks": 5,
+      "is_abstained": false,
+      "abstention_type": null,
+      "grounding_status": "verified",
+      "citations_emitted": 1,
+      "answer_preview": "Chunk overlap is usually 10 to 20 percent of chunk size [S1]."
+    },
+    {
+      "query_id": "EVAL-06",
+      "query": "How does an embedding turn meaning into numbers in RAG?",
+      "is_negative": false,
+      "expected_document": "Everything-to-know-about-RAG.pdf",
+      "retrieval_hit": false,
+      "retrieved_chunks": 5,
+      "is_abstained": false,
+      "abstention_type": null,
+      "grounding_status": "verified",
+      "citations_emitted": 1,
+      "answer_preview": "An embedding model reads a chunk and outputs an array of numbers representing meaning [S1]."
+    },
+    {
+      "query_id": "EVAL-07-NEG",
+      "query": "What is the replacement procedure for a high-voltage lithium electric vehicle battery pack?",
+      "is_negative": true,
+      "expected_document": null,
+      "retrieval_hit": null,
+      "retrieved_chunks": 0,
+      "is_abstained": true,
+      "abstention_type": "fast_path_empty_context",
+      "grounding_status": "abstained",
+      "citations_emitted": 0,
+      "answer_preview": "I cannot answer this question based on the provided document context."
+    },
+    {
+      "query_id": "EVAL-08-NEG",
+      "query": "How often should tea roses be pruned and fertilized during the growing season?",
+      "is_negative": true,
+      "expected_document": null,
+      "retrieval_hit": null,
+      "retrieved_chunks": 1,
+      "is_abstained": true,
+      "abstention_type": "model_explicit",
+      "grounding_status": "abstained",
+      "citations_emitted": 0,
+      "answer_preview": "I cannot answer this question based on the provided document context."
+    },
+    {
+      "query_id": "EVAL-09-NEG",
+      "query": "What chemical treatment effectively clears a clogged kitchen sink drain pipe?",
+      "is_negative": true,
+      "expected_document": null,
+      "retrieval_hit": null,
+      "retrieved_chunks": 0,
+      "is_abstained": true,
+      "abstention_type": "fast_path_empty_context",
+      "grounding_status": "abstained",
+      "citations_emitted": 0,
+      "answer_preview": "I cannot answer this question based on the provided document context."
+    },
+    {
+      "query_id": "EVAL-10-NEG",
+      "query": "How is scoring calculated during a tiebreak game in grand slam tennis tournaments?",
+      "is_negative": true,
+      "expected_document": null,
+      "retrieval_hit": null,
+      "retrieved_chunks": 0,
+      "is_abstained": true,
+      "abstention_type": "fast_path_empty_context",
+      "grounding_status": "abstained",
+      "citations_emitted": 0,
+      "answer_preview": "I cannot answer this question based on the provided document context."
+    },
+    {
+      "query_id": "FINZAA-AUTH-01",
+      "query": "Who are the authors of FINZAA.pdf? Please check the first page of the paper and cite the source.",
+      "is_negative": false,
+      "expected_document": "FINZAA.pdf",
+      "retrieval_hit": true,
+      "retrieved_chunks": 1,
+      "is_abstained": false,
+      "abstention_type": null,
+      "grounding_status": "verified",
+      "citations_emitted": 1,
+      "answer_preview": "Anjali Singh is the author of FINZAA.pdf [S1]."
+    }
+  ]
+}

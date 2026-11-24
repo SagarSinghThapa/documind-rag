@@ -1,0 +1,106 @@
+{
+  "timestamp": "2026-11-24T21:32:07",
+  "hydration_latency_ms": 12460.425699944608,
+  "total_vectors": 436,
+  "registered_documents": 3,
+  "queries": [
+    {
+      "query_id": "Q1_BASWE",
+      "query_type": "positive",
+      "query": "What is chunk overlap and what is the typical starting percentage?",
+      "latency_ms": 17503.770300070755,
+      "is_abstained": false,
+      "generated_tokens": 20,
+      "answer_preview": "Chunk overlap is usually 10 to 20 percent of chunk size [S1].",
+      "verified_citations_count": 1,
+      "citations": [
+        {
+          "source_id": "S1",
+          "document_name": "6a30092e0998_BASWE-15-RAG-Concepts-Guide.pdf",
+          "pages": [
+            2,
+            2
+          ],
+          "is_syntax_valid": true,
+          "is_metadata_valid": true,
+          "is_evidence_supported": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "query_id": "Q2_EVERYTHING_RAG",
+      "query_type": "positive",
+      "query": "In Everything-to-know-about-RAG.pdf, what is the context window of an LLM compared to? Cite the source.",
+      "latency_ms": 22419.950400013477,
+      "is_abstained": false,
+      "generated_tokens": 30,
+      "answer_preview": "In Everything-to-know-about-RAG.pdf, the context window of an LLM compared to is 10 billion documents. [S1]",
+      "verified_citations_count": 1,
+      "citations": [
+        {
+          "source_id": "S1",
+          "document_name": "606ad137b843_Everything-to-know-about-RAG.pdf",
+          "pages": [
+            56,
+            57
+          ],
+          "is_syntax_valid": true,
+          "is_metadata_valid": true,
+          "is_evidence_supported": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "query_id": "Q3_FINZAA",
+      "query_type": "positive",
+      "query": "Who is the author of FINZAA.pdf? Cite the source page.",
+      "latency_ms": 24363.16040006932,
+      "is_abstained": false,
+      "generated_tokens": 18,
+      "answer_preview": "Anjali Singh is the author of FINZAA.pdf. [S1]",
+      "verified_citations_count": 1,
+      "citations": [
+        {
+          "source_id": "S1",
+          "document_name": "95cca1e4774a_FINZAA.pdf",
+          "pages": [
+            2,
+            7
+          ],
+          "is_syntax_valid": true,
+          "is_metadata_valid": true,
+          "is_evidence_supported": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "query_id": "Q4_DISTRACTOR_CARBURETOR",
+      "query_type": "negative",
+      "query": "How do you tune an automotive carburetor for cold weather?",
+      "latency_ms": 9.420400019735098,
+      "is_abstained": true,
+      "generated_tokens": 0,
+      "answer_preview": "I cannot answer this question based on the provided document context.",
+      "verified_citations_count": 0,
+      "citations": [],
+      "passed": true
+    },
+    {
+      "query_id": "Q5_DISTRACTOR_EV",
+      "query_type": "negative",
+      "query": "What is the replacement procedure for a high-voltage lithium electric vehicle battery pack?",
+      "latency_ms": 9.076000074855983,
+      "is_abstained": true,
+      "generated_tokens": 0,
+      "answer_preview": "I cannot answer this question based on the provided document context.",
+      "verified_citations_count": 0,
+      "citations": [],
+      "passed": true
+    }
+  ],
+  "safe_reset_verified": true,
+  "all_acceptance_passed": true
+}

@@ -1,0 +1,344 @@
+{
+  "hardware_metrics": {
+    "cold_model_load_ms": 1888.53,
+    "ttft_ms": 12429.73,
+    "mean_generation_latency_ms": 14633.96,
+    "mean_total_latency_ms": 14651.23,
+    "mean_tokens_per_sec": 2.05,
+    "start_ram_mb": 67.4,
+    "peak_ram_mb": 1604.59,
+    "peak_ram_growth_mb": 1537.19
+  },
+  "categorized_tests": [
+    {
+      "category": "1. Factual with direct supporting evidence",
+      "query": "What is the typical recommended range for chunk overlap percentage?",
+      "expected_behavior": "Answers 10 to 20 percent with citation to BASWE guide p. 3",
+      "raw_answer": "The typical recommended range for chunk overlap percentage is 10 to 20 percent [S1].",
+      "is_abstained": false,
+      "abstention_type": null,
+      "grounding_status": "verified",
+      "cited_source_ids": [
+        "6a30092e0998_c0004_rec"
+      ],
+      "citations": [
+        {
+          "raw_text": "[S1]",
+          "document_name": "BASWE-15-RAG-Concepts-Guide.pdf",
+          "start_page": 2,
+          "end_page": 2,
+          "matched_chunk_id": "6a30092e0998_c0004_rec",
+          "is_syntax_valid": true,
+          "is_metadata_valid": true,
+          "is_evidence_supported": true,
+          "source_id": "S1"
+        }
+      ],
+      "retrieval_chunks_count": 1,
+      "retrieval_references": [
+        {
+          "doc": "BASWE-15-RAG-Concepts-Guide.pdf",
+          "pages": "2-2",
+          "chunk_id": "6a30092e0998_c0004_rec"
+        }
+      ],
+      "telemetry": {
+        "retrieval_latency_ms": 13.752599945291877,
+        "context_build_latency_ms": 0.12229999992996454,
+        "generation_latency_ms": 15159.056899952702,
+        "total_latency_ms": 15198.214699979872,
+        "prompt_tokens": 537,
+        "completion_tokens": 22,
+        "tokens_per_sec": 1.4512776187329068,
+        "hallucinated_citations": [],
+        "fast_path": false
+      },
+      "total_latency_ms": 15198.237800039351
+    },
+    {
+      "category": "2. Paraphrased question",
+      "query": "How much repetition should occur between adjacent text segments in chunking?",
+      "expected_behavior": "Answers 10-20% overlap based on same source evidence",
+      "raw_answer": "THE PURPOSE states that \"WHEN TO USE IT\" says \"WHEN YOU ARE CHUNKING BY SIZErather THAN BY STRUCTURE.\" So there should be no repetition between adjacent text segments in chunking.",
+      "is_abstained": true,
+      "abstention_type": "fallback_unsupported",
+      "grounding_status": "unsupported",
+      "cited_source_ids": [],
+      "citations": [],
+      "retrieval_chunks_count": 1,
+      "retrieval_references": [
+        {
+          "doc": "BASWE-15-RAG-Concepts-Guide.pdf",
+          "pages": "2-2",
+          "chunk_id": "6a30092e0998_c0004_rec"
+        }
+      ],
+      "telemetry": {
+        "retrieval_latency_ms": 13.408300001174212,
+        "context_build_latency_ms": 0.15710003208369017,
+        "generation_latency_ms": 17660.388999967836,
+        "total_latency_ms": 17676.593599957414,
+        "prompt_tokens": 539,
+        "completion_tokens": 43,
+        "tokens_per_sec": 2.434827454824371,
+        "hallucinated_citations": [],
+        "fast_path": false
+      },
+      "total_latency_ms": 17676.617400022224
+    },
+    {
+      "category": "3. Multi-chunk question",
+      "query": "What is hybrid search and how does it combine embeddings with keyword search?",
+      "expected_behavior": "Explains dense + sparse retrieval across pages 6-7",
+      "raw_answer": "Hybrid search combines embeddings with keyword search. This approach allows for more efficient retrieval by leveraging both types of data. Embeddings store dense vectors representing keywords, while keyword search uses sparse vectors to find relevant results. By combining these two methods, hybrid search can improve search accuracy and efficiency.",
+      "is_abstained": true,
+      "abstention_type": "fallback_unsupported",
+      "grounding_status": "unsupported",
+      "cited_source_ids": [],
+      "citations": [],
+      "retrieval_chunks_count": 1,
+      "retrieval_references": [
+        {
+          "doc": "Everything-to-know-about-RAG.pdf",
+          "pages": "24-24",
+          "chunk_id": "606ad137b843_c0034_rec"
+        }
+      ],
+      "telemetry": {
+        "retrieval_latency_ms": 46.74709995742887,
+        "context_build_latency_ms": 0.2465000143274665,
+        "generation_latency_ms": 20624.644699972123,
+        "total_latency_ms": 20676.649800036103,
+        "prompt_tokens": 612,
+        "completion_tokens": 58,
+        "tokens_per_sec": 2.8121696564342944,
+        "hallucinated_citations": [],
+        "fast_path": false
+      },
+      "total_latency_ms": 20676.672899979167
+    },
+    {
+      "category": "4. Questions requiring correct page citations",
+      "query": "How does an LLM count text and what is the rule of thumb for tokens to English words?",
+      "expected_behavior": "Answers 100 tokens is about 75 English words with citation to Everything-to-know p. 5",
+      "raw_answer": "An LLM counts each token (small piece of text) as a short word, which is typically around 100 tokens. The rule of thumb for English words is that 100 tokens is approximately equal to 75 words. This means that if an LLM receives a large amount of text, it may struggle to understand individual words due to the sheer volume of data.",
+      "is_abstained": true,
+      "abstention_type": "fallback_unsupported",
+      "grounding_status": "unsupported",
+      "cited_source_ids": [],
+      "citations": [],
+      "retrieval_chunks_count": 1,
+      "retrieval_references": [
+        {
+          "doc": "Everything-to-know-about-RAG.pdf",
+          "pages": "5-5",
+          "chunk_id": "606ad137b843_c0005_rec"
+        }
+      ],
+      "telemetry": {
+        "retrieval_latency_ms": 11.719699949026108,
+        "context_build_latency_ms": 0.12500002048909664,
+        "generation_latency_ms": 24086.140800034627,
+        "total_latency_ms": 24101.164299994707,
+        "prompt_tokens": 671,
+        "completion_tokens": 80,
+        "tokens_per_sec": 3.3214121209440486,
+        "hallucinated_citations": [],
+        "fast_path": false
+      },
+      "total_latency_ms": 24101.187799940817
+    },
+    {
+      "category": "5. Unsupported / Out-of-domain question",
+      "query": "What is the proper water temperature and fermentation time for sourdough bread?",
+      "expected_behavior": "Fast-path pre-generation abstention",
+      "raw_answer": "I cannot answer this question based on the provided document context.",
+      "is_abstained": true,
+      "abstention_type": "fast_path_empty_context",
+      "grounding_status": "abstained",
+      "cited_source_ids": [],
+      "citations": [],
+      "retrieval_chunks_count": 0,
+      "retrieval_references": [],
+      "telemetry": {
+        "retrieval_latency_ms": 9.605700033716857,
+        "context_build_latency_ms": 0.0,
+        "generation_latency_ms": 0.0,
+        "total_latency_ms": 9.628200088627636,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "tokens_per_sec": 0.0,
+        "fast_path": true
+      },
+      "total_latency_ms": 9.63919993955642
+    },
+    {
+      "category": "6. Empty retrieval results / Below threshold",
+      "query": "How do I replace a high-voltage lithium electric vehicle battery pack?",
+      "expected_behavior": "Fast-path pre-generation abstention (0 chunks above 0.35)",
+      "raw_answer": "I cannot answer this question based on the provided document context.",
+      "is_abstained": true,
+      "abstention_type": "fast_path_empty_context",
+      "grounding_status": "abstained",
+      "cited_source_ids": [],
+      "citations": [],
+      "retrieval_chunks_count": 0,
+      "retrieval_references": [],
+      "telemetry": {
+        "retrieval_latency_ms": 8.659499930217862,
+        "context_build_latency_ms": 0.0,
+        "generation_latency_ms": 0.0,
+        "total_latency_ms": 8.679899969138205,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "tokens_per_sec": 0.0,
+        "fast_path": true
+      },
+      "total_latency_ms": 8.689900045283139
+    },
+    {
+      "category": "7. Contradictory or insufficient evidence",
+      "query": "What is the exact subscription price of DocuMind enterprise edition and its refund policy?",
+      "expected_behavior": "Abstains due to lack of evidence in context",
+      "raw_answer": "I cannot answer this question based on the provided document context.",
+      "is_abstained": true,
+      "abstention_type": "fast_path_empty_context",
+      "grounding_status": "abstained",
+      "cited_source_ids": [],
+      "citations": [],
+      "retrieval_chunks_count": 0,
+      "retrieval_references": [],
+      "telemetry": {
+        "retrieval_latency_ms": 9.453000035136938,
+        "context_build_latency_ms": 0.0,
+        "generation_latency_ms": 0.0,
+        "total_latency_ms": 9.473900077864528,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "tokens_per_sec": 0.0,
+        "fast_path": true
+      },
+      "total_latency_ms": 9.484300040639937
+    }
+  ],
+  "split_b_metrics": {
+    "total_queries": 10,
+    "positive_queries": 6,
+    "negative_queries": 4,
+    "answer_correctness": 0.0,
+    "evidence_support_rate": 0.0,
+    "citation_validity_rate": 1.0,
+    "citation_support_accuracy": 1.0,
+    "negative_abstention_rate": 1.0,
+    "abstention_precision": 0.4,
+    "abstention_recall": 1.0,
+    "unsupported_answer_rate": 0.6,
+    "false_answer_rate": 0.0,
+    "abstention_errors": 1.0,
+    "mean_generation_latency_ms": 14633.96,
+    "mean_total_latency_ms": 14651.23,
+    "mean_tokens_per_sec": 2.05
+  },
+  "query_evaluations": [
+    {
+      "query_id": "EVAL-01",
+      "is_negative": false,
+      "is_abstained": true,
+      "abstention_type": "fallback_unsupported",
+      "grounding_status": "unsupported",
+      "citations_count": 0,
+      "total_latency_ms": 24928.227600059472,
+      "status": "ERRONEOUS_ABSTENTION"
+    },
+    {
+      "query_id": "EVAL-02",
+      "is_negative": false,
+      "is_abstained": true,
+      "abstention_type": "fallback_unsupported",
+      "grounding_status": "unsupported",
+      "citations_count": 0,
+      "total_latency_ms": 19204.9965999322,
+      "status": "ERRONEOUS_ABSTENTION"
+    },
+    {
+      "query_id": "EVAL-03",
+      "is_negative": false,
+      "is_abstained": true,
+      "abstention_type": "fallback_unsupported",
+      "grounding_status": "unsupported",
+      "citations_count": 0,
+      "total_latency_ms": 19091.08040004503,
+      "status": "ERRONEOUS_ABSTENTION"
+    },
+    {
+      "query_id": "EVAL-04",
+      "is_negative": false,
+      "is_abstained": true,
+      "abstention_type": "fallback_unsupported",
+      "grounding_status": "unsupported",
+      "citations_count": 0,
+      "total_latency_ms": 29682.6793999644,
+      "status": "ERRONEOUS_ABSTENTION"
+    },
+    {
+      "query_id": "EVAL-05",
+      "is_negative": false,
+      "is_abstained": true,
+      "abstention_type": "fallback_unsupported",
+      "grounding_status": "unsupported",
+      "citations_count": 0,
+      "total_latency_ms": 30668.32609998528,
+      "status": "ERRONEOUS_ABSTENTION"
+    },
+    {
+      "query_id": "EVAL-06",
+      "is_negative": false,
+      "is_abstained": true,
+      "abstention_type": "fallback_unsupported",
+      "grounding_status": "unsupported",
+      "citations_count": 0,
+      "total_latency_ms": 22873.01770003978,
+      "status": "ERRONEOUS_ABSTENTION"
+    },
+    {
+      "query_id": "EVAL-07-NEG",
+      "is_negative": true,
+      "is_abstained": true,
+      "abstention_type": "fast_path_empty_context",
+      "grounding_status": "abstained",
+      "citations_count": 0,
+      "total_latency_ms": 11.301000020466745,
+      "status": "CORRECT_ABSTENTION"
+    },
+    {
+      "query_id": "EVAL-08-NEG",
+      "is_negative": true,
+      "is_abstained": true,
+      "abstention_type": "fast_path_empty_context",
+      "grounding_status": "abstained",
+      "citations_count": 0,
+      "total_latency_ms": 22.15750003233552,
+      "status": "CORRECT_ABSTENTION"
+    },
+    {
+      "query_id": "EVAL-09-NEG",
+      "is_negative": true,
+      "is_abstained": true,
+      "abstention_type": "fast_path_empty_context",
+      "grounding_status": "abstained",
+      "citations_count": 0,
+      "total_latency_ms": 16.27270004246384,
+      "status": "CORRECT_ABSTENTION"
+    },
+    {
+      "query_id": "EVAL-10-NEG",
+      "is_negative": true,
+      "is_abstained": true,
+      "abstention_type": "fast_path_empty_context",
+      "grounding_status": "abstained",
+      "citations_count": 0,
+      "total_latency_ms": 14.194099931046367,
+      "status": "CORRECT_ABSTENTION"
+    }
+  ]
+}

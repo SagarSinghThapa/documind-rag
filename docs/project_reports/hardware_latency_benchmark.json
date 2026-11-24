@@ -1,0 +1,45 @@
+{
+  "hardware": {
+    "total_physical_ram_gb": 15.65,
+    "total_physical_ram_bytes": 16806248448,
+    "available_ram_gb": 0.92,
+    "cpu_physical_cores": 10,
+    "cpu_logical_cores": 12
+  },
+  "cold_init_ms": {
+    "embedder_load_ms": 62991.2,
+    "vector_store_load_ms": 173.66,
+    "llm_load_ms": 2.08
+  },
+  "retrieval_benchmarks": {
+    "mean_query_embed_ms": 37.09,
+    "p95_query_embed_ms": 94.59,
+    "mean_faiss_search_ms": 1.23,
+    "p95_faiss_search_ms": 2.57,
+    "mean_context_build_ms": 0.11,
+    "mean_total_retrieval_ms": 39.53,
+    "fast_path_distractor_retrieval_ms": 16.6,
+    "distractor_chunks_returned": 0
+  },
+  "generation_benchmarks": {
+    "test_query": "Who are the authors of FINZAA.pdf? Please check the first page of the paper and cite the source.",
+    "answer_text": "Anjali Singh is the author of the document \"FINZAA.pdf\". The first page of the paper is located at [S1]",
+    "prompt_tokens": 816,
+    "completion_tokens": 78,
+    "generation_latency_ms": 58803.51,
+    "total_pipeline_latency_ms": 61533.32,
+    "tokens_per_sec": 1.33,
+    "is_abstained": false,
+    "grounding_status": "verified",
+    "citations_count": 1,
+    "fast_path_e2e_abstention_ms": 57.66,
+    "distractor_fast_path_flag": true
+  },
+  "memory_profile_mb": {
+    "initial_rss": 67.74,
+    "post_embedder_rss": 574.53,
+    "post_store_rss": 578.73,
+    "post_llm_rss": 578.73,
+    "peak_generation_rss": 1587.68
+  }
+}

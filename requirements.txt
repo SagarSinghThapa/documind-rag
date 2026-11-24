@@ -1,5 +1,13 @@
-# DocuMind — Work Package 02 Dependencies (PDF Ingestion & Chunking)
+# DocuMind — Dependencies
 # Minimal local-first dependencies: zero paid APIs, zero cloud services, zero heavy frameworks
 
+# Phase 1: Ingestion & Chunking
 pymupdf>=2.1.0
 pytest>=8.0.0
+
+# Phase 2: Local Embeddings & Vector Index
+sentence-transformers>=3.0.0
+faiss-cpu>=1.8.0
+
+# Phase 5: Streamlit Interactive UI
+streamlit>=1.35.0

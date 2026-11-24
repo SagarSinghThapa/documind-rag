@@ -83,6 +83,10 @@ coverage.xml
 !/data/processed/.gitkeep
 /data/evaluation/*
 !/data/evaluation/.gitkeep
+data/uploads/
+data/index/
+scratch/
+.streamlit/secrets.toml
 
 # Models, weights, embeddings, and vector stores / indexes
 models/
